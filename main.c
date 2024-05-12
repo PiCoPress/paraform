@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
     char *path = getenv("PWD");
     path = !path? getenv("CD"): path;
 
-    char *s = (char*) malloc(strlen(argv[1]) + strlen(path));
+    char *s = (char*) malloc(strlen(argv[1]) + strlen(path) + 1);
     strcat(s, path);
     strcat(s, "/");
     strcat(s, argv[1]);
