@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
         }
 
         fseek(f, -(int)sig, SEEK_CUR);
-        if (sig == 512) fwrite(buffer, 1, BUF, f);
+        if (sig == BUF) fwrite(buffer, 1, BUF, f);
         else
         {
             fwrite(buffer, 1, sig, f);
